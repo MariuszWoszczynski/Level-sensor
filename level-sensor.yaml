@@ -72,7 +72,7 @@ sensor:
     echo_pin: GPIO25
     name: "Level - [m]"
     id: level_m
-    update_interval: 1s
+    update_interval: 10s
     timeout: 1m
     accuracy_decimals: 2
     filters:
@@ -85,7 +85,7 @@ sensor:
     name: "Level [%]"
     unit_of_measurement: "%"
     accuracy_decimals: 0
-    update_interval: 1s
+    update_interval: 10s
     lambda: |-
       if (isnan(id(level_m).state)) {
         return NAN;
